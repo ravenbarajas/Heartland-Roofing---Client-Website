@@ -8,101 +8,52 @@ import {
   CloudRain, 
   Droplets, 
   Layers,
-  ArrowRight,
-  CheckCircle
+  ArrowRight
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
   {
     title: "Residential Roofing",
-    description: "Complete roof installations and replacements for homes throughout the Midwest. We specialize in asphalt shingles, metal roofing, and tile installations that withstand harsh weather conditions.",
+    description: "Complete roof installations and replacements for homes throughout the Midwest.",
     icon: HomeIcon,
     bgColor: "bg-brick-red",
     href: "/services/residential",
-    features: [
-      "New roof installation",
-      "Roof replacement", 
-      "Asphalt shingle roofing",
-      "Metal roofing systems",
-      "Tile and slate roofing",
-      "Energy-efficient solutions"
-    ]
   },
   {
     title: "Commercial Roofing", 
-    description: "Professional commercial roofing solutions for businesses, warehouses, and industrial facilities. We handle large-scale projects with minimal disruption to your operations.",
+    description: "Professional commercial roofing solutions for businesses, warehouses, and industrial facilities.",
     icon: Building,
     bgColor: "bg-slate-gray",
     href: "/services/commercial",
-    features: [
-      "Flat roof systems",
-      "EPDM membrane roofing",
-      "TPO roofing",
-      "Metal commercial roofing",
-      "Roof maintenance programs",
-      "Industrial applications"
-    ]
   },
   {
     title: "Roof Repair",
-    description: "Fast and reliable roof repairs for leaks, damaged shingles, and wear-and-tear issues. Our emergency services are available 24/7 to protect your property.",
+    description: "Fast and reliable roof repairs for leaks, damaged shingles, and wear-and-tear issues.",
     icon: Wrench,
     bgColor: "bg-forest-green", 
     href: "/services/repair",
-    features: [
-      "Leak detection and repair",
-      "Shingle replacement",
-      "Flashing repair",
-      "Ventilation issues",
-      "Emergency tarping",
-      "Preventive maintenance"
-    ]
   },
   {
     title: "Storm Damage Repair",
-    description: "Specialized storm damage assessment and repair services. We work directly with insurance companies to streamline the claims process and restore your roof quickly.",
+    description: "Specialized storm damage assessment and repair services. We work directly with insurance companies.",
     icon: CloudRain,
     bgColor: "bg-warm-orange",
     href: "/services/storm",
-    features: [
-      "Insurance claim assistance",
-      "Storm damage assessment",
-      "Hail damage repair",
-      "Wind damage restoration",
-      "Emergency board-up",
-      "Complete reconstruction"
-    ]
   },
   {
     title: "Gutter Installation",
-    description: "Professional gutter installation and replacement services to protect your home's foundation and landscaping from water damage. Custom solutions for every home.",
+    description: "Professional gutter installation and replacement services to protect your home's foundation and landscaping.",
     icon: Droplets,
     bgColor: "bg-blue-600",
     href: "/services/gutters",
-    features: [
-      "Seamless gutter installation",
-      "Gutter guards and screens",
-      "Downspout installation",
-      "Gutter repair and cleaning",
-      "Copper and aluminum gutters",
-      "Proper drainage solutions"
-    ]
   },
   {
     title: "Siding Installation",
-    description: "Complete siding installation and repair services to enhance your home's curb appeal and energy efficiency. Choose from various materials and styles.",
+    description: "Complete siding installation and repair services to enhance your home's curb appeal and energy efficiency.",
     icon: Layers,
     bgColor: "bg-green-600",
     href: "/services/siding",
-    features: [
-      "Vinyl siding installation",
-      "Fiber cement siding",
-      "Wood siding restoration",
-      "Insulated siding systems",
-      "Trim and soffit work",
-      "Color matching services"
-    ]
   }
 ];
 
@@ -147,18 +98,6 @@ export default function Services() {
                     <CardContent className="p-8">
                       <h3 className="text-2xl font-slab font-bold text-slate-gray mb-4">{service.title}</h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-slate-gray mb-3">What We Offer:</h4>
-                        <div className="grid md:grid-cols-2 gap-2">
-                          {service.features.map((feature) => (
-                            <div key={feature} className="flex items-start">
-                              <CheckCircle className="h-4 w-4 text-forest-green mt-1 mr-2 flex-shrink-0" />
-                              <span className="text-sm text-gray-600">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
                       
                       <div className="flex flex-col sm:flex-row gap-3">
                         <Link href={service.href} className="flex-1">
@@ -206,7 +145,7 @@ export default function Services() {
               viewport={{ once: true }}
             >
               <div className="bg-brick-red text-white p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <CheckCircle className="h-8 w-8" />
+                <ArrowRight className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-slab font-bold text-slate-gray mb-3">Licensed & Insured</h3>
               <p className="text-gray-600">Fully licensed in Iowa with comprehensive insurance coverage for your peace of mind.</p>
@@ -220,7 +159,7 @@ export default function Services() {
               viewport={{ once: true }}
             >
               <div className="bg-forest-green text-white p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <CheckCircle className="h-8 w-8" />
+                <ArrowRight className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-slab font-bold text-slate-gray mb-3">Quality Materials</h3>
               <p className="text-gray-600">We use only premium materials from trusted manufacturers, backed by industry-leading warranties.</p>
@@ -234,7 +173,7 @@ export default function Services() {
               viewport={{ once: true }}
             >
               <div className="bg-warm-orange text-white p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <CheckCircle className="h-8 w-8" />
+                <ArrowRight className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-slab font-bold text-slate-gray mb-3">Emergency Service</h3>
               <p className="text-gray-600">24/7 emergency response for storm damage and urgent repairs to protect your property.</p>
