@@ -158,8 +158,8 @@ export default function FAQ() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">Frequently Asked Questions</h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-slate-gray mb-6">Frequently Asked Questions</h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-slate-gray leading-relaxed">
               Find answers to common questions about our roofing services, processes, and policies. Can't find what you're looking for? Contact us directly.
             </p>
           </motion.div>
