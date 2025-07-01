@@ -53,8 +53,8 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">About Heartland Roofing</h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-slate-gray mb-6">About Heartland Roofing</h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto text-slate-gray leading-relaxed">
               Over two decades of protecting Midwest homes with quality craftsmanship, honest service, and unmatched expertise.
             </p>
           </motion.div>
