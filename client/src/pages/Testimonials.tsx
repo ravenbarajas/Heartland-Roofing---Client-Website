@@ -115,8 +115,8 @@ export default function Testimonials() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">Customer Reviews</h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-slate-gray mb-6">Customer Reviews</h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-slate-gray leading-relaxed">
               Don't just take our word for it. Here's what hundreds of satisfied homeowners and business owners across the Midwest have to say about our roofing services.
             </p>
           </motion.div>
