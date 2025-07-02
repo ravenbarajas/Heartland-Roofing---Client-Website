@@ -99,7 +99,7 @@ export default function Header() {
             </Link>
             
             <Link href="/contact">
-              <Button className="bg-brick-red hover:bg-red-700 text-white">
+              <Button className="bg-brick-red hover:bg-red-700 text-white hover:scale-105 transition-all duration-300">
                 Get a Quote
               </Button>
             </Link>
