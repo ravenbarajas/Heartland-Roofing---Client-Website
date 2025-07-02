@@ -150,7 +150,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/services">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-brick-red px-8 py-4 text-lg font-semibold transition-all duration-300">
+              <Button variant="outline" className="border-white text-slate-gray hover:bg-warm-orange hover:text-white px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
                 <Wrench className="mr-2 h-5 w-5" />
                 Our Services
               </Button>
