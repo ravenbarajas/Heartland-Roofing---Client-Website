@@ -7,11 +7,24 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { MessageCircle, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<string[]>([
+    "Hello! How can I help you today?",
+  ]);
+  const [inputMessage, setInputMessage] = useState("");
+
+  const handleSendMessage = () => {
+    if (inputMessage.trim() !== "") {
+      setMessages([...messages, inputMessage]);
+      setInputMessage("");
+    }
+  };
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -30,7 +43,7 @@ export default function Chatbot() {
             </Button>
           </DialogTrigger>
         </motion.div>
-        <DialogContent className="sm:max-w-[425px] p-0">
+        <DialogContent className="sm:max-w-[425px] p-0 flex flex-col h-[500px]">
           <DialogHeader className="bg-brick-red text-white p-6 rounded-t-lg flex flex-row justify-between items-center">
             <DialogTitle className="text-lg font-semibold">Chat with Heartland Roofing</DialogTitle>
             <Button
@@ -42,14 +55,43 @@ export default function Chatbot() {
               <X className="h-4 w-4" />
             </Button>
           </DialogHeader>
-          <div className="p-6">
-            <p className="text-gray-600 mb-4">
-              This is where your AI chatbot will be integrated.
-            </p>
-            <p className="text-sm text-gray-500">
-              For now, please call us at <strong>(555) 123-ROOF</strong> or use our contact form.
-            </p>
-            {/* Future chatbot integration will go here */}
+          <ScrollArea className="flex-1 p-6">
+            <div className="space-y-4">
+              {messages.map((msg, index) => (
+                <div
+                  key={index}
+                  className={
+                    index % 2 === 0
+                      ? "flex justify-start"
+                      : "flex justify-end"
+                  }
+                >
+                  <div
+                    className={
+                      index % 2 === 0
+                        ? "bg-gray-200 text-gray-800 rounded-lg p-3 max-w-[80%]"
+                        : "bg-brick-red text-white rounded-lg p-3 max-w-[80%]"
+                    }
+                  >
+                    {msg}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </ScrollArea>
+          <div className="p-6 border-t flex items-center">
+            <Input
+              placeholder="Type your message..."
+              className="flex-1 mr-2"
+              value={inputMessage}
+              onChange={(e) => setInputMessage(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  handleSendMessage();
+                }
+              }}
+            />
+            <Button onClick={handleSendMessage} className="bg-brick-red hover:bg-red-700">Send</Button>
           </div>
         </DialogContent>
       </Dialog>
