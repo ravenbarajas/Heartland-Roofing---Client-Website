@@ -107,8 +107,8 @@ export default function Gallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">Project Gallery</h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-slate-gray mb-6">Project Gallery</h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-slate-gray leading-relaxed">
               Explore our portfolio of completed roofing projects across the Midwest. See the quality craftsmanship that has made us a trusted partner for hundreds of homeowners and businesses.
             </p>
           </motion.div>
