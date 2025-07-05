@@ -50,7 +50,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className={`font-medium transition-colors ${location === "/" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
+            <Link href="/" className={`font-medium hover:scale-105 transition-all duration-300 transition-colors ${location === "/" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
               Home
             </Link>
             
@@ -82,19 +82,19 @@ export default function Header() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link href="/about" className={`font-medium transition-colors ${location === "/about" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
+            <Link href="/about" className={`font-medium hover:scale-105 transition-all duration-300 transition-colors ${location === "/about" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
               About Us
             </Link>
-            <Link href="/gallery" className={`font-medium transition-colors ${location === "/gallery" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
+            <Link href="/gallery" className={`font-medium hover:scale-105 transition-all duration-300 transition-colors ${location === "/gallery" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
               Gallery
             </Link>
-            <Link href="/testimonials" className={`font-medium transition-colors ${location === "/testimonials" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
+            <Link href="/testimonials" className={`font-medium hover:scale-105 transition-all duration-300 transition-colors ${location === "/testimonials" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
               Testimonials
             </Link>
-            <Link href="/faq" className={`font-medium transition-colors ${location === "/faq" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
+            <Link href="/faq" className={`font-medium hover:scale-105 transition-all duration-300 transition-colors ${location === "/faq" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
               FAQ
             </Link>
-            <Link href="/contact" className={`font-medium transition-colors ${location === "/contact" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
+            <Link href="/contact" className={`font-medium hover:scale-105 transition-all duration-300 transition-colors ${location === "/contact" ? "text-brick-red" : "text-slate-gray hover:text-brick-red"}`}>
               Contact
             </Link>
             
