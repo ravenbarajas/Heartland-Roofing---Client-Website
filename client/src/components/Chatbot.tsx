@@ -46,14 +46,6 @@ export default function Chatbot() {
         <DialogContent className="sm:max-w-[425px] p-0 flex flex-col h-[500px]">
           <DialogHeader className="bg-brick-red text-white p-6 rounded-t-lg flex flex-row justify-between items-center">
             <DialogTitle className="text-lg font-semibold">Chat with Heartland Roofing</DialogTitle>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-              className="text-white hover:text-gray-200 hover:bg-red-700"
-            >
-              <X className="h-4 w-4" />
-            </Button>
           </DialogHeader>
           <ScrollArea className="flex-1 p-6">
             <div className="space-y-4">
